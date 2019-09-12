@@ -1,4 +1,4 @@
-feature 'add bookmark' do
+feature 'adding a bookmark' do
   scenario 'user adds bookmark to the database' do
 
     visit('/bookmarks')
