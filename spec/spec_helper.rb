@@ -9,7 +9,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rubocop'
 require 'rspec'
-require 'setup_test_database'
+require 'set_up_test_database'
 require 'simplecov'
 require 'simplecov-console'
 
@@ -42,7 +42,7 @@ RSpec.configure do |config|
   # assertions if you prefer.
 
   config.before(:each) do
-    setup_test_database
+    set_up_test_database
   end 
 
   config.expect_with :rspec do |expectations|

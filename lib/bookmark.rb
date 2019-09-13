@@ -61,5 +61,3 @@ class Bookmark
     @url = url
   end
 end
-
-
