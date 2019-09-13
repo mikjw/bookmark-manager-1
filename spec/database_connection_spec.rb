@@ -4,7 +4,6 @@ describe DatabaseConnection do
   describe '.set_up' do
     it 'sets up a database connection' do
       expect(PG).to receive(:connect).with(dbname: 'bookmark_manager_test')
-      
       DatabaseConnection.set_up('bookmark_manager_test')
     end
   end
@@ -14,7 +13,6 @@ describe DatabaseConnection do
       connection = DatabaseConnection.set_up('bookmark_manager_test')
   
       expect(connection).to receive(:exec).with("SELECT * FROM bookmarks;")
-  
       DatabaseConnection.query("SELECT * FROM bookmarks;")
     end
   end

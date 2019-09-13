@@ -28,6 +28,11 @@ describe Bookmark do
       expect(bookmark.url).to eq('http://www.makersacademy.com')
       expect(bookmark.title).to eq('Makers')
     end
+
+    it 'does not create a bookmark with invalid URL' do
+      Bookmark.add(url: 'httg://invalid..tech', title: 'invalid bookmark')
+      expect(Bookmark.all).not_to include('invalid bookmark')
+    end
   end
 
   describe '.delete' do
